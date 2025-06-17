@@ -1,0 +1,26 @@
+{
+	"info": {
+		"_postman_id": "d6d80571-e86d-4739-842f-d0e292f82f0d",
+		"name": "Wuzzuf collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45961116"
+	},
+	"item": [
+		{
+			"name": "W - CV search - Talents search",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "W - CV search - Talent aggregation",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
