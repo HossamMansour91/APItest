@@ -1,0 +1,1378 @@
+{
+	"info": {
+		"_postman_id": "2e789934-5cf9-4177-af86-10aa519e31ae",
+		"name": "My Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45961116"
+	},
+	"item": [
+		{
+			"name": "F - GetAccessToken",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test('preRequest', function () {",
+							"});"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/9.0.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"username\": \"hotjar@YAHoo.com\",\n\"password\": \"12345678\",\n\"scope\": \"employer\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing.forasna.basharsys.com/api/login",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"forasna",
+						"basharsys",
+						"com"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "F - GetMe",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test('preRequest', function () {",
+							"});"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI2NjdlMWE2Mi02ODQyLTQ3YzItOWMyZS1kYmMxMTQ2OTQ1NTYiLCJqdGkiOiIwODA1M2JiNmM1OWQ3NjcxYmY0YmRlYmFlNTMwYzc4YzJkMzdhMjJkODcxZTcwNjI4NDEzZTMxYjU2MjVlODViYjNlMTczM2U4MjYzNmUzYiIsImlhdCI6MTcxNDMwMTIwNiwibmJmIjoxNzE0MzAxMjA2LCJleHAiOjE3MTY4OTMyMDUsInN1YiI6ImFzc2lnbl9ub3RlMkB5YWhvby5jb20iLCJzY29wZXMiOlsiZW1wbG95ZXIiXX0.yg-OdCOL_g09ILV8HYOSJxn93A1NKm2EQO3_dZYqBpcHJrS8_KYUqfFYA4r90sho1ltPxJH4GtAcEfC7reYtLDLOEl4qIAcxEYG6uUF4of8EE9XNMGsGIuXjgngoUJURFUJqeWW649E9GY9hp2qFxYJrW8N0SuoGam3MTYGmgZG-ry6BLb286yaAOh3oL6mAq2HvZTTw9BeI1qNk3PBKVqD6ii9UbgYhjdnSjpKjagBSrK-EPrv53mCzXQm0k5TpyD40tM5OVx9n-CSTxnJj6H3ss6-hbLua654It3iGXh7Gqec0gpnedE1ZpdXOAecE_lKRyeuvYCueMOt1NZZguQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "insomnia/9.0.0",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI2NjdlMWE2Mi02ODQyLTQ3YzItOWMyZS1kYmMxMTQ2OTQ1NTYiLCJqdGkiOiIzNzI0YWI3ODhmNTllMjQxZTliOWJhNDA3OGZlZDY4OWI2MDY5NzMxZGFhNzIyNmJiOWIxMmNjNmMzYThmNjkwYmYxZTJjNjIwZWU2MzgxNiIsImlhdCI6MTcyNDUzNjM4NywibmJmIjoxNzI0NTM2Mzg3LCJleHAiOjE3MjcyMTQ3ODcsInN1YiI6IkFkZF9uZXdfam9iQHlhaG9vLmNvbSIsInNjb3BlcyI6WyJlbXBsb3llciJdfQ.iLKnI2tsnxSpbiX3-WG_p_BekfKLQs2EAWkuYKhL-L630JdRtupUdZgX0cauLIxGW4vPyDl0lxBty1iNJwQVA9fznebAKn_QmSyAD_RqAioWAxJdInoqbudWowncHA-p3g-7e_AyencWS1OHXlsEPHGGS9mEKbELH721kafbbxjQAdoj_AVo1yUhvbn7iPxKYpsiiBzQzip0HxNNSq99bCQHCUubeR4lZUfwvLMotUrOem0UoUlozcz7hIAeEVI_kSRKU6WYlV2rI4n7EX9UzJxdWZOYqy4GhJlgIP7Ak92NunrYwIGAMPMxrFDPJQuikGAAEiSWaKbFuJp612Kugw"
+					}
+				],
+				"url": {
+					"raw": "https://testing.forasna.basharsys.com/api/users/me",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"forasna",
+						"basharsys",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "F - GetCompanyInfo",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test('preRequest', function () {",
+							"});"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "insomnia/9.0.0"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI2NjdlMWE2Mi02ODQyLTQ3YzItOWMyZS1kYmMxMTQ2OTQ1NTYiLCJqdGkiOiI4NDdlZWE3OTVkNzQwMjZiNjNlYTdiMDQ2ZWI3NmM1MmVhZTY0Mjc1OWE5MGJlYWUyYzhmYTAyMzExNWFjNjllZTBmMmE4ZTUwYWI3MDlmNSIsImlhdCI6MTcxNDQ4NjQ0MCwibmJmIjoxNzE0NDg2NDQwLCJleHAiOjE3MTcwNzg0NDAsInN1YiI6ImRvbUB5YWhvby5jb20iLCJzY29wZXMiOlsiZW1wbG95ZXIiXX0.6EN6jDb2J3XVSLbLKSK8LViPR1pidQo1ZrK7woBZT7tpCCRgro4Uyk3uUZ9E-eikXDlGjdCHbk3WTK3RLlQN0LHQNYxLD1_wYUoIT0N2_blcMDzhwOpBBhzgcQngvLMOP4FEvuuahdk3jUvS6YWL0NoUMIzRaUPR5-ioco--6v-EqkZqPw77eTKD2Zkg_W6iQnvxI20eBgdqNbq3pGrpBt4qzQkfEGazqupG9rv64OqaOEZD4fdVpEJ8tZe_bMIbJnpym6yA0-mJ7Ri-b_iu2oen-o6NAv5b9kjXp55Irx8FCL9_OwUGMiz1zjXuYrnMrDBKh12RY3_s-aNyb5ELaw"
+					}
+				],
+				"url": {
+					"raw": "https://testing.forasna.basharsys.com/api/companies/61709",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"forasna",
+						"basharsys",
+						"com"
+					],
+					"path": [
+						"api",
+						"companies",
+						"61709"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "F - GetPackage",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test('preRequest', function () {",
+							"});"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "insomnia/9.0.0"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI2NjdlMWE2Mi02ODQyLTQ3YzItOWMyZS1kYmMxMTQ2OTQ1NTYiLCJqdGkiOiI4NDdlZWE3OTVkNzQwMjZiNjNlYTdiMDQ2ZWI3NmM1MmVhZTY0Mjc1OWE5MGJlYWUyYzhmYTAyMzExNWFjNjllZTBmMmE4ZTUwYWI3MDlmNSIsImlhdCI6MTcxNDQ4NjQ0MCwibmJmIjoxNzE0NDg2NDQwLCJleHAiOjE3MTcwNzg0NDAsInN1YiI6ImRvbUB5YWhvby5jb20iLCJzY29wZXMiOlsiZW1wbG95ZXIiXX0.6EN6jDb2J3XVSLbLKSK8LViPR1pidQo1ZrK7woBZT7tpCCRgro4Uyk3uUZ9E-eikXDlGjdCHbk3WTK3RLlQN0LHQNYxLD1_wYUoIT0N2_blcMDzhwOpBBhzgcQngvLMOP4FEvuuahdk3jUvS6YWL0NoUMIzRaUPR5-ioco--6v-EqkZqPw77eTKD2Zkg_W6iQnvxI20eBgdqNbq3pGrpBt4qzQkfEGazqupG9rv64OqaOEZD4fdVpEJ8tZe_bMIbJnpym6yA0-mJ7Ri-b_iu2oen-o6NAv5b9kjXp55Irx8FCL9_OwUGMiz1zjXuYrnMrDBKh12RY3_s-aNyb5ELaw"
+					}
+				],
+				"url": {
+					"raw": "https://testing.forasna.basharsys.com/api/packages/154546495",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"forasna",
+						"basharsys",
+						"com"
+					],
+					"path": [
+						"api",
+						"packages",
+						"154546495"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "F - GetEmployer",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test('preRequest', function () {",
+							"});"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "insomnia/9.0.0"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI2NjdlMWE2Mi02ODQyLTQ3YzItOWMyZS1kYmMxMTQ2OTQ1NTYiLCJqdGkiOiIwODA1M2JiNmM1OWQ3NjcxYmY0YmRlYmFlNTMwYzc4YzJkMzdhMjJkODcxZTcwNjI4NDEzZTMxYjU2MjVlODViYjNlMTczM2U4MjYzNmUzYiIsImlhdCI6MTcxNDMwMTIwNiwibmJmIjoxNzE0MzAxMjA2LCJleHAiOjE3MTY4OTMyMDUsInN1YiI6ImFzc2lnbl9ub3RlMkB5YWhvby5jb20iLCJzY29wZXMiOlsiZW1wbG95ZXIiXX0.yg-OdCOL_g09ILV8HYOSJxn93A1NKm2EQO3_dZYqBpcHJrS8_KYUqfFYA4r90sho1ltPxJH4GtAcEfC7reYtLDLOEl4qIAcxEYG6uUF4of8EE9XNMGsGIuXjgngoUJURFUJqeWW649E9GY9hp2qFxYJrW8N0SuoGam3MTYGmgZG-ry6BLb286yaAOh3oL6mAq2HvZTTw9BeI1qNk3PBKVqD6ii9UbgYhjdnSjpKjagBSrK-EPrv53mCzXQm0k5TpyD40tM5OVx9n-CSTxnJj6H3ss6-hbLua654It3iGXh7Gqec0gpnedE1ZpdXOAecE_lKRyeuvYCueMOt1NZZguQ"
+					}
+				],
+				"url": {
+					"raw": "https://testing.forasna.basharsys.com/api/employers/64508",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"forasna",
+						"basharsys",
+						"com"
+					],
+					"path": [
+						"api",
+						"employers",
+						"64508"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "F - GetAdmin",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test('preRequest', function () {",
+							"});"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "insomnia/9.0.0"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI2NjdlMWE2Mi02ODQyLTQ3YzItOWMyZS1kYmMxMTQ2OTQ1NTYiLCJqdGkiOiIwODA1M2JiNmM1OWQ3NjcxYmY0YmRlYmFlNTMwYzc4YzJkMzdhMjJkODcxZTcwNjI4NDEzZTMxYjU2MjVlODViYjNlMTczM2U4MjYzNmUzYiIsImlhdCI6MTcxNDMwMTIwNiwibmJmIjoxNzE0MzAxMjA2LCJleHAiOjE3MTY4OTMyMDUsInN1YiI6ImFzc2lnbl9ub3RlMkB5YWhvby5jb20iLCJzY29wZXMiOlsiZW1wbG95ZXIiXX0.yg-OdCOL_g09ILV8HYOSJxn93A1NKm2EQO3_dZYqBpcHJrS8_KYUqfFYA4r90sho1ltPxJH4GtAcEfC7reYtLDLOEl4qIAcxEYG6uUF4of8EE9XNMGsGIuXjgngoUJURFUJqeWW649E9GY9hp2qFxYJrW8N0SuoGam3MTYGmgZG-ry6BLb286yaAOh3oL6mAq2HvZTTw9BeI1qNk3PBKVqD6ii9UbgYhjdnSjpKjagBSrK-EPrv53mCzXQm0k5TpyD40tM5OVx9n-CSTxnJj6H3ss6-hbLua654It3iGXh7Gqec0gpnedE1ZpdXOAecE_lKRyeuvYCueMOt1NZZguQ"
+					}
+				],
+				"url": {
+					"raw": "https://testing.forasna.basharsys.com/api/admins/298",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"forasna",
+						"basharsys",
+						"com"
+					],
+					"path": [
+						"api",
+						"admins",
+						"298"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "F - Search talents - Get all filters ",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test('preRequest', function () {",
+							"});"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI2NjdlMWE2Mi02ODQyLTQ3YzItOWMyZS1kYmMxMTQ2OTQ1NTYiLCJqdGkiOiJlNGFmY2JjNTJmYTQ4ZTUwNWRlMmNmNDFiODZjNDNjMjIzM2YwYWVjMWQ5ZTZhMjg4ZWFjNmZmNThhZTUwNWVlOTM2NGNlZTk3NzJhOTAwNSIsImlhdCI6MTczNzg4ODU3NCwibmJmIjoxNzM3ODg4NTc0LCJleHAiOjE3NDA1NjY5NzQsInN1YiI6ImhvdGphckBZQUhvby5jb20iLCJzY29wZXMiOlsiZW1wbG95ZXIiXX0.KZx-3W6UB2jUxKqjejkSv87CopdjVNKXJeA3scbbuTIQLphTDP3zI4iIKdZu5lhD-WsWpPndWEAf0TJvVtwFgiAJAlufOu9X2J8709E7hlGZxvwzYCTJR2SAHJkpcC4Bm1EPeKYc7WCOYqeM8fmanRNdkQowDL9u0qoUa40MW_7Outt9jS3qwQ-s___KsInaRcyXPET5vrXwpnZHfGjFvD7yiN4ibxjg_8GRhhYNjL5Sub3a8Ga3q_xK11TIO27WdPji70SU5rhnjQ94ONnD4Ko5faCsDr5qxqVMQxVjMfs_GiGPoJnxzSoPb41cdKLzhfPlrrbNvYtXHvyccPbRdw"
+					},
+					{
+						"key": "Cookie",
+						"value": "user_access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI3IiwianRpIjoiYzYyOTg2N2I0YTgwY2UzZTlmOTc1NThlYjM1NGY4Mzc1ODI2YjRhMGUzMGY2NDdhMmUwODgxMjc2YzdkMDc2ZDk0OWM1NjMyNWI3NzllNDciLCJpYXQiOjE3MjQ1MzYyMjUuNzEyODIxLCJuYmYiOjE3MjQ1MzYyMjUuNzEyODI0LCJleHAiOjE3MjcxMjgyMjUuNjk5MzExLCJzdWIiOiJmb3Jhc25hLWVtcGxveWVyOjY0NTY4Iiwic2NvcGVzIjpbImVtcGxveWVyIl19.Ro9om9wVZLmxz7NzJRu5HmxFeLkWzRpFRD5SIfbIG3bjMa40VQbwA4EN5XL0J7SFdkrQ0jtamLKENddpuCWuO9wwaJI7Ise8ZqX2R5Mb6qe8nJaq46xLRlRNw-n88-aY8EbEcIOmP1L28S2mIiinqeqWo6lqXpY0ySYrK9F_sHdh1cm_tdk_nusHQeCfDlhTjNGNdaV7S6Zy6f9GAwC47iRdc29bmQDhd6BjVzQiOtK_JhUzPN-KoDWGOHh5LdGshMQfFK99uIh-P0PAMFTqCKoYdRoiEw3PVxWoE9390YdSOpWB_27xIb36qPQAoBGzZYVF9WWFcbkkG_ckjeRZldPPv4qzy1VyumBt3bhnkKDC6lDgwTslfI44NSvOYMdKi-xf8w2H_RgzZX7pI0nplZtVrASEoYQI_mv3zX0Jezq_z3GKVY2xYJYuY96h_sUsuJx6xtMeK9oZ8eRdSIXCsXK5KtlYkY4b9mTj6449T83Hj2QAh21hwLQ2FD0TrtLLZmkS4LoPlDZJfsc6Sh68nRu0rs8MqJ97wmohkFQXxbYG0mWjr0wGbiQEz6DSKEHLTk3USCjR_madhAaWuu7p1FDgn7uuld4t-eRDPha_6L8xbr0bIad7ANnsAZ0YopBpkxy1C4HWTUtkT1rVMgNE4wNMJyzZOagZNmtmwSGu9-A",
+						"disabled": true
+					},
+					{
+						"key": "Accept ",
+						"value": "application/vnd.api+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"data\": {\n \"type\":\"searchTalents\",\n \"attributes\": {\n \"query\": \"اشراف تربوي\",\n \"latitude\": 0,\n \"longitude\": 0,\n \"page_size\": 100,\n \"start_index\": 0,\n \"user_id\": \"64747\"\n }}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing.forasna.basharsys.com/api/search/talents?include=experience,desiredWorkFields",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"forasna",
+						"basharsys",
+						"com"
+					],
+					"path": [
+						"api",
+						"search",
+						"talents"
+					],
+					"query": [
+						{
+							"key": "include",
+							"value": "experience,desiredWorkFields"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "F - Search talents ",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test('preRequest', function () {",
+							"});"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI2NjdlMWE2Mi02ODQyLTQ3YzItOWMyZS1kYmMxMTQ2OTQ1NTYiLCJqdGkiOiJlNGFmY2JjNTJmYTQ4ZTUwNWRlMmNmNDFiODZjNDNjMjIzM2YwYWVjMWQ5ZTZhMjg4ZWFjNmZmNThhZTUwNWVlOTM2NGNlZTk3NzJhOTAwNSIsImlhdCI6MTczNzg4ODU3NCwibmJmIjoxNzM3ODg4NTc0LCJleHAiOjE3NDA1NjY5NzQsInN1YiI6ImhvdGphckBZQUhvby5jb20iLCJzY29wZXMiOlsiZW1wbG95ZXIiXX0.KZx-3W6UB2jUxKqjejkSv87CopdjVNKXJeA3scbbuTIQLphTDP3zI4iIKdZu5lhD-WsWpPndWEAf0TJvVtwFgiAJAlufOu9X2J8709E7hlGZxvwzYCTJR2SAHJkpcC4Bm1EPeKYc7WCOYqeM8fmanRNdkQowDL9u0qoUa40MW_7Outt9jS3qwQ-s___KsInaRcyXPET5vrXwpnZHfGjFvD7yiN4ibxjg_8GRhhYNjL5Sub3a8Ga3q_xK11TIO27WdPji70SU5rhnjQ94ONnD4Ko5faCsDr5qxqVMQxVjMfs_GiGPoJnxzSoPb41cdKLzhfPlrrbNvYtXHvyccPbRdw"
+					},
+					{
+						"key": "Cookie",
+						"value": "user_access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI3IiwianRpIjoiODA4ZTA2MWQxZTFmNGI4YjBhZmZiZWM4MGMwYzI1ZmFjNmIzN2ExNWJmYzg4NzY3OGU5YThkYWUwYWRmNzI0ZjE1YzA1MjIyZjFmY2YyM2QiLCJpYXQiOjE3MTEyNDM0NzEuMzk3NjkxLCJuYmYiOjE3MTEyNDM0NzEuMzk3Njk0LCJleHAiOjE3MTM4MzU0NzEuMzgwMTIxLCJzdWIiOiJmb3Jhc25hLWVtcGxveWVyOjY0NDkzIiwic2NvcGVzIjpbImVtcGxveWVyIl19.b0ov90m64hqaO--i6MDr6k98X_aBbZh0uanCw2UJRIFDdTy4RGNwT5od3jXwIilQrGc3dpwLFeAxTAWl9_qjgruC2tVR1sMca4TdK3Juxyl2YZrpedGpB-TUUsJlp53pAbwDH5RQZFoFsyv_V3qsP6H_BOHMSGKPOM9SlpiuNGfO59fLjeIoOxGKZxsgL1xlq0EZg18CGR8vVE20rQoO7yR1NECngpqG0FT2k3Y0PfdM53P8_J_l_GdfD6hrUEiDbI0dUrpCfeIpcvCzgjsvPEVPFXnC3As6fpHb9GXW6rtvwxc76RGwssiIUGOSnU8A3IOFMk0g1YF5tFBnh4DafowiEnMuB0ow6XsvZ54DtT599e9TLpso2uyqJ3S-Zy0TPvbBrr1SlzksnAHjjEFvSh6Mrbm5NRg76qLkagvhpu1EAuFyNRrN1egcWA3fE7Z7_I5B7Mcw6jU28g74TsZkgnz2KAVwnbaamWAts-6NjLVTLGc5ZT54dNWVkYanlomd4fKehEl77j2bTN9WdJ6Nd11w5gAnrclSYALJ6tRHjG66_ml03gL-iCW90lslxKZL0p3GEiOnKQ82Y5nAwg0X5XIeb03JLMrPiIMQh125_8R2OSQhZ1qItyzCFpvwNJn2xT6E5tS20LAxOxYzHuV7BhorS448P1WcGZgvjSMDSek; PHPSESSID=1f2251506d5e5882735a3d5b6ba71e39",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.api+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"data\": {\n \"type\":\"searchTalents\",\n \"attributes\": {\n \"query\": \"مصر\",\n \"latitude\": 0,\n \"longitude\": 0,\n \"page_size\": 100,\n \"search_filters\": {\n \"nationality\": [\n \"مصر\"\n ],\n \"governate\": [\n \"القليوبية\",\n \"الفيوم\",\n \"الجيزة\",\n \"القاهرة\",\n \"السويس\"\n ],\n \"area\": [\n \"بنها\",\n \"حلوان\",\n \"التجمع الخامس\",\n \"شبرا\",\n \"الهرم\",\n \"امبابة\",\n \"الدقى\",\n \"المعادى\",\n \"السويس\",\n \"شبين القناطر\",\n \"عين شمس\"\n ],\n \"experience.work_fields.main_field\": [\n ],\n \"experience.work_fields.sub_fields\": [\n \n ],\n \"education_level\": [\n \"\",\n \"\"\n ],\n \"gender\": [\n \"male\",\n \"female\"\n ],\n \n \"driving_license\": [\n \"\"\n ],\n \n \"salary\": {\n \"from\": 0,\n \"to\": 10000\n },\n \"formal_training\": [\n ],\n \"age\": {\n \"from\": 20,\n\t \"to\":40\n },\n\n \"experience_years\": {\n \"from\": 1,\n \"to\": 20\n }\n },\n \"start_index\": 0,\n \"user_id\": \"64747\"\n }}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing.forasna.basharsys.com/api/search/talents?include=experience,desiredWorkFields",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"forasna",
+						"basharsys",
+						"com"
+					],
+					"path": [
+						"api",
+						"search",
+						"talents"
+					],
+					"query": [
+						{
+							"key": "include",
+							"value": "experience,desiredWorkFields"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "F - JS data indexing",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{     \"numHours\": 24,     \"batchSize\": 100 }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://talent.testing.forasna.basharsys.com/talent/index/update",
+					"protocol": "https",
+					"host": [
+						"talent",
+						"testing",
+						"forasna",
+						"basharsys",
+						"com"
+					],
+					"path": [
+						"talent",
+						"index",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "W - Index jobs- Search page - Staging env",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"includeExpired\": false,\n\t\"truncateIndex\": false,\n\t\"size\": 5,\n\t\"recreate_schema\": false,\n\t\"index_name\": \"testing-jobs\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wuzzuf-job-staging.wuzzuf.basharsys.com/jobs/index/all",
+					"protocol": "https",
+					"host": [
+						"wuzzuf-job-staging",
+						"wuzzuf",
+						"basharsys",
+						"com"
+					],
+					"path": [
+						"jobs",
+						"index",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "W - User visit logs - Etisalat login",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.api+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiMzkzZWQzNjQzMjRiZjlmMzIwMzhmMjFmODVmZWQ5NzYyMjBkZjE4ODMyMDQ2YzUwYjY2NDJiMzBlNDJhMmI3NGVjZTYxMmI2OGNjNTVmMGQiLCJpYXQiOjE3MjgyNTM0NjguOTE5MDkzLCJuYmYiOjE3MjgyNTM0NjguOTE5MDk3LCJleHAiOjE3MzA4NDkwNjguOTAzNDk0LCJzdWIiOiJ1c2VyOjI2MTg1NDEiLCJzY29wZXMiOlsiZW1wbG95ZXIiXX0.I0V4Bo3Gy6jQ8RbI8QEQrxrR1rrD5cusFqCb3tcdIzOcTnEs1YoNsYXXixkVPNIHmpSooZY3HVqh6PNXGnH7dNya3F4euQsWBC3rOT0_NN92dte3NNGP5G2wQ_2QS0cunNW207Xv2oxf5eTrUN67uayEfF1doJnXlr6kmOik0TnsKStD66H5lwhQ73VFDICpo4I_g--91BuzozB5I8E9qCZgtZRqrekAYI7l_VaDQ0tC3if2C0XTAQnwSBTAe9SrfJFXNn4SvyPMCotpDM6Kp306Q5zPw7CzUScRKhMJVf-fSZ7i96f3EejaaWEv3W5wjfeZUkbIdgN_QPmQngcjcnPZqKFr38-zaNtqd_J5qEdqikA_r39Z1g4QEyF4dBHq2dd9nJYgDe9er7MPt7Aurc8DUdE9hmaxpnVkGg29m4Xr2Kkf9pozLQLGiivLatYDEmHx88Zze0CjOkyWTtY98cafpX8HK5mMqEHe17gSdq9UgIevq-o8gIVQyNtkNKh-7rNmVOgkpPLj1S1jmb2CZK_zEzeIj0Q8yk9peaxzm8H_GlHLdQ3TpTWJSzNOuNCuVcJfIsTSPzc7VlO45Tgyd78-3HVWyzlIdRLZqCLHzxDhJn5Qil_gOjXIECv9YDS-47LqLxWDQkfI2WthmpjIZzsM8xyvJ8NJHvles49VkZo"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"data\": {\n\t\t\"type\": \"userVisitLog\",\n\t\t\"attributes\": {\n\t\t\t\"isSignup\": false,\n\t\t\t\"requestData\": {\n\t\t\t\t\"utms\": {\n\t\t\t\t\t\"utmMedium\": null,\n\t\t\t\t\t\"utmSource\": \"referral\",\n\t\t\t\t\t\"utmCampaign\": \"etisalat-partaner-integartion\",\n\t\t\t\t\t\"utmContent\": null,\n\t\t\t\t\t\"utmTerm\": null\n\t\t\t\t},\n\t\t\t\t\"userAgent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36\",\n\t\t\t\t\"landingUrl\": \"https://testing.wuzzuf.basharsys.com/jobs/egypt\",\n\t\t\t\t\"referrerUrl\": \"https://www.etisalat.com/\"\n\t\t\t}\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing.wuzzuf.basharsys.com/api/log/visit",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"wuzzuf",
+						"basharsys",
+						"com"
+					],
+					"path": [
+						"api",
+						"log",
+						"visit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "W - CV search - quickFilters",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.api+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiYzM2ZmU4MDgyY2Y2OTIxMmEyNzQxZjAxZGQ4OTQ3M2RlMTc2YjYxNDQxYmM3MzYxNjQ0NjAxYWZmY2NjNzBhYmVlYWY4YTQ0Y2M4Yzg0NzQiLCJpYXQiOjE3MzQ4Nzk4NzYuNTg5MTc4LCJuYmYiOjE3MzQ4Nzk4NzYuNTg5MTgxLCJleHAiOjE3Mzc0NzE4NzYuNTc0NDg4LCJzdWIiOiJ1c2VyOjI2MTYxNDUiLCJzY29wZXMiOlsiZW1wbG95ZXIiXX0.rFdj_AjWlaYjumUW4kYDdUMSQcazroQeWtIeAjwmffwGT07FyA2-4m_vTVqEhRLa2kLY_GMKkdJt0CqSWPyOd-LeQOkROZ9Mk2HsvHbXi2BULYgJTdKQsCfLqZ9flvjE4v6AawALPl56KEYKyoKB1TsmoW0VR55XlqDa0DNQhTzbeggOY2dsldceUdSsaSes2MVxq2QjtujCtQHwu9O06Dx3vdLNs6MdwNgHcxrMlQove9-f5oAM7iF6lsf50uJVG4tYq1GIhy7tFkWvgHxTIBM3v9Y6Qj-C5yNaqXn3vE6WGJm3bt1TZDF8hr_p2oo7GbkHlXDHqKv87iEVjYz1jcgM1hcWLhsK-FUtyKFWnAjW5m8PLZDdrHmlZIWifPCJZSWkcbXzpI3tmLvfynHmt1zaR2sahxPIe0rERRgUpJRkSYLaPZvAsapy4aPD5J94sKJAnC_r1wU2klgr5zWSx8dRkrkHCytTLYFcnU3Z7WVEZ2pDuVvBnisVT95wydeTri5fXc474oyFvpYoOCMY_CHku--ljP_EPI4EbUPN9xCUQKwtP7BLlSnBr3V97dzNzG0hFCn6v0LE-FmdApXrVT4Uwo47cOlPNRiOe4IOWflDJ5_J1c4ZdCsxizve1A_rMR44uGPThTOMi2nMHMB7FGLUzW9o0-JbLgkveAahtos"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json"
+					}
+				],
+				"url": {
+					"raw": "https://testing.wuzzuf.basharsys.com/api/log/search/suggest-filter",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"wuzzuf",
+						"basharsys",
+						"com"
+					],
+					"path": [
+						"api",
+						"log",
+						"search",
+						"suggest-filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "W - CV search - searchCriteriaLog",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.api+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiMTAxYmQwODRmYjczZTljZTZlMGU0NzEzYTExOWQ0ZDIzZjNmMzVkNTVjOTY5NjEwMGM0Mjg2NTBjMzY5YjNjNTAwOTJiMjlhNDcxNGVjNWYiLCJpYXQiOjE3MzE4ODUzODQuODY1ODM5LCJuYmYiOjE3MzE4ODUzODQuODY1ODQ4LCJleHAiOjE3MzQ0NzczODQuODQ3Njk3LCJzdWIiOiJ1c2VyOjI2MTkxNDEiLCJzY29wZXMiOlsiZW1wbG95ZXIiXX0.UD8lx5sA2GwOQ4_z1OYFUFYYiJCElsoR_BTGicckLVMhkdb8yE5Zbcoq8Va8klvfOrQ69Elj-_2aMINWx43kV0IUCreP5D1X-mqGgwnwOECug9L2Y2YJoYpgjtqQPBLsvF2KrFvbhKnxL54-76Vv9BBq25rgykmmAp8GM9RP4rQCf-R2IWccKycqYSC3LwAHEvxUO5YtZYDT-3Pf_wKayuUKJFTevT-tbsWrSR25-XyUFfNkRbhlmuTvGeME-LjEFK4DsLh53xyur7BMQAWSVYfNCZY1b4bJmPZoCzLXjDVep0zdplLnuoqne4FBfxZha3T9OKwAA_LPNSnqIxOVlP8vUC-hA0VOrW_uAbBzwEY9-oWTYxRYfHtNv6-oQ4pFUVlVueVGv3CwYBE6deIDaz1_Iuv0IIvrcP6D8Olby019qfmFgP_bxAeA0ABnYiZPGtj6KVUeEiT-qo5cWRC9WKKBwrvrtwd1EVnx3IWUlF3JE1DHsrziYzFu2vLr0q3AfTR1mZ3PDWbUiDK_dUqlKH2_zGkeiG4P9aLgYV-PUoz2Z-uBTlGDbu7ei3acUwwjY26oAySm8yLufRYxBO3vfw--NAIuQlMTXV15JyLiuVyr0PH7_eeDP89v7bidKCMBR86llGxJ_UsHjJHc0gFl6_lNof8n7k6ym6wBfgsGq0g"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"data\": {\n\t\t\"type\": \"searchCriteria\",\n\t\t\"attributes\": {\n\t\t\t\"numberOfResults\": \"350\",\n\t\t\t\"filters\": [\n\t\t\t\t{\n\t\t\t\t\t\"filter\": \"43\",\n\t\t\t\t\t\"values\": [\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"value\": \"true\"\n\t\t\t\t\t\t}\n\t\t\t\t\t]\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing.wuzzuf.basharsys.com/api/log/search/6389914/criteria",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"wuzzuf",
+						"basharsys",
+						"com"
+					],
+					"path": [
+						"api",
+						"log",
+						"search",
+						"6389914",
+						"criteria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "W - CV search - newExperienceFilter",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.api+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiMGQ5ZTRjOTU2ODY5YWU0MDFjNmVhYTllNDk4MWYxNjYyNmMwNGQxZTAyMTNhMThjNzEyMTdkZGYwMTIxMzRjOWI1ZWQxYjM3MDFhNDUwNmEiLCJpYXQiOjE3MzE5Mjc4OTQuMTk2NDUzLCJuYmYiOjE3MzE5Mjc4OTQuMTk2NDU4LCJleHAiOjE3MzQ1MTk4OTQuMTgzMjM2LCJzdWIiOiJ1c2VyOjI2MTkxNDMiLCJzY29wZXMiOlsiZW1wbG95ZXIiXX0.oFKbZ8Q7eCwXDbUBm39aQWhFSQ7cBFHy5pzzAZAXj_nOYyif6flnRArA5o_TQcA5dm4nPZgP8En5qEsveScciJO5VCDLUpEbtlvKRZbVVEywPUozu08qOCY22D9X3P0RyHGd6ytDB5nf-bKyQz_ScXqLxdGt-4n_dWslx3bU5tOUMu4BoELorwga_jZBwEHFP7VnyZ1q0Uhsu28Pfuggr8TDXNNbpaz4u-y1UZU7tdWjUo2gJP6Fz0qaTfTVVEE0Ix28s3DFWYbpwSnIsS2zrtr6bhDhJ0VYIMTUVXfz4yXH5gu8X43ZGCI37G5HMppc3ZGEfVdE_66NLqtxzNIseDtBKdqrffAKbcBVTY7JwrSWaetYOUsf4YiL_J7MXaxwSjsk5nfbxf35zAhW7crlbmOKax6jyV-klXzwVSYx9_1cGNNmu2mHzuzoJUZxXQQAxesvZPVqrTEfxapOeAqc6M8srjibJzvIfZhnbhyYbFK77AW-aC1bhRCA7_6I5lEB5_WBpX-6-P_OeXZCsCh_fgtibsqxjX40eXtzM8XgTdsFnZlCebHKEjTplcurll3xRTId7IL4u-Wqg1tAgQ_5uGM0l7Izrt64182j5XLO_nIa51LnDdXy0KjA42EoKPH3R7ZOnnGFiNr1COQvdoIbzNr5j-UCp2EqwIaBwgiwrw0",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"latitude\": 0,\n\t\"longitude\": 0,\n\t\"pageSize\": 100,\n\t\"query\": \"egypt\",\n\t  \"companyId\":14868,\n\t\"searchFilters\": {\n\t\t\"country\": \n[\"Egypt\"],\n\t\t\"city\": \n[\"Alexandria\"],\n\t\t\"career_level\": \n[\"Entry Level\"],\n\t\t\n\t\t\"applied_before\": [\n\t\t\t\"14868\"\n\t\t],\n\t\t\t\t\"locked\": [\n\t\t\t\"14868\"\n\t\t]\n\t\t\n\t\t\n\t},\n\t\"startIndex\": 0,\n\t\"debugMode\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing-talent.wuzzuf.basharsys.com/talent/search/talents",
+					"protocol": "https",
+					"host": [
+						"testing-talent",
+						"wuzzuf",
+						"basharsys",
+						"com"
+					],
+					"path": [
+						"talent",
+						"search",
+						"talents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "W - CV search - updateTalentProfile ",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"num_of_hours\": 1,\n\t\"indexName\": \"testing-talents\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing-talent.wuzzuf.basharsys.com/talent/index/updated_profiles/testing-talents",
+					"protocol": "https",
+					"host": [
+						"testing-talent",
+						"wuzzuf",
+						"basharsys",
+						"com"
+					],
+					"path": [
+						"talent",
+						"index",
+						"updated_profiles",
+						"testing-talents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "W - CV search - updateTalentActions",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"num_of_hours\": 1,\n\t\"indexName\": \"testing-talents\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing-talent.wuzzuf.basharsys.com/talent/index/updated_profiles_actions/testing-talents",
+					"protocol": "https",
+					"host": [
+						"testing-talent",
+						"wuzzuf",
+						"basharsys",
+						"com"
+					],
+					"path": [
+						"talent",
+						"index",
+						"updated_profiles_actions",
+						"testing-talents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "W - Talent Indexing",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ids\": [\n\t\t\n\n\t\t2619609\n\t],\n\t\"recreateSchema\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing-talent.wuzzuf.basharsys.com/talent/index/ids",
+					"protocol": "https",
+					"host": [
+						"testing-talent",
+						"wuzzuf",
+						"basharsys",
+						"com"
+					],
+					"path": [
+						"talent",
+						"index",
+						"ids"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "W - CV search - Talents search",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/10.1.1"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"latitude\": 0,\n  \"longitude\": 0,\n  \"pageSize\": 100,\n  \"query\": \"sales\",\n  \"searchFilters\": {\n\t\n   \n  },\n  \"startIndex\": 0,\n\t  \"userId\": \"2618871\",\n  \"debugMode\": false\n}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing-talent.wuzzuf.basharsys.com/talent/search/talents",
+					"protocol": "https",
+					"host": [
+						"testing-talent",
+						"wuzzuf",
+						"basharsys",
+						"com"
+					],
+					"path": [
+						"talent",
+						"search",
+						"talents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "W - CV search - Talent aggregation",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"companyId\": 14868,\n\t\"latitude\": 0,\n\t\"longitude\": 0,\n\t\"pageSize\": 25,\n\t\"query\": \"egypt\",\n\t\"searchFilters\": {\n\t\t\t\t\"country\": \n[\"Egypt\"],\n\t\t\"city\": \n[\"Alexandria\"],\n\t\t\"career_level\": \n[\"Entry Level\"],\n\t\t\n\t\t\"applied_before\": [\n\t\t\t\"14868\"\n\t\t],\n\t\t\t\t\"locked\": [\n\t\t\t\"14868\"\n\t\t]\n\t\t\n\t},\n\t\"startIndex\": 0,\n\t\"algorithmVersion\": \"v2\",\n\t\t\"userId\": \"815495\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing-talent.wuzzuf.basharsys.com/talent/aggregate/talent_aggregations",
+					"protocol": "https",
+					"host": [
+						"testing-talent",
+						"wuzzuf",
+						"basharsys",
+						"com"
+					],
+					"path": [
+						"talent",
+						"aggregate",
+						"talent_aggregations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "F - CV search - Talent Search",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.api+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI2NjdlMWE2Mi02ODQyLTQ3YzItOWMyZS1kYmMxMTQ2OTQ1NTYiLCJqdGkiOiIyYTMxN2NkYjlmNmI4ZDU3OGU2M2QwNjI2NjI0NjE5NTY1NTlkMjJjMjE2ZmRiZjM1Y2MwMjFlMGRlZmUwNmIyMjEyNjU2MGY4NDlkYjFkMyIsImlhdCI6MTczNjM0NzEzMCwibmJmIjoxNzM2MzQ3MTMwLCJleHAiOjE3MzkwMjU1MzAsInN1YiI6ImVzcmFhLnJhYmllQGJhc2hhcnNvZnQuY29tIiwic2NvcGVzIjpbImFkbWluIl19.PBzhqLPBWYQovmvw-3jvujSWv3x0SrHqANIyl8DN1cqc1s5rAh0ZVhLnk7naNp1Pjf6Qojozgf1BFOJSpgG_rDeoA2uHLQpq2rnqxXi5_VqamC8zGdSaohJjd-czwlJnmEpqsQgKCDB8xW_o6SGflwtApZ6mRPt2BqeIrJnq9qpF4gw_qp-epGV__yY2yOgNKGtBXTXrX_GKu-zrhYubyHrDA3HhV7MhQgVMMZYXJYPl9zc16g3eqZxoPdvp4-ME07UfCa3_q3POGvXm2inollRvyn3OTHQUZBpNVkOsGd_BBu8_ryWIX7Baf5nVjPOD9NiKlMGBLROu56g1JGd4Eg"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"data\": {\n\t\t\"type\": \"searchTalents\",\n\t\t\"attributes\": {\n\t\t\t\"query\": \"محامي\",\n\t\t\t\"latitude\": 0,\n\t\t\t\"longitude\": 0,\n\t\t\t\"page_size\": 10,\n\t\t\t\"start_index\": 0,\n\t\t\t\"user_id\": \"64771\",\n\t\t\t\"includeAggs\": false,\n\t\t\t\"debug_mode\": false\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing.forasna.basharsys.com/api/search/talents?include=experience,desiredWorkFields",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"forasna",
+						"basharsys",
+						"com"
+					],
+					"path": [
+						"api",
+						"search",
+						"talents"
+					],
+					"query": [
+						{
+							"key": "include",
+							"value": "experience,desiredWorkFields"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stg - W - CV search - updateTalentProfile ",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/10.3.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"num_of_hours\": 1,\n\t\"indexName\": \"testing-talents\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stg-talent.wuzzuf.basharsys.com/talent/index/updated_profiles/talents",
+					"protocol": "https",
+					"host": [
+						"stg-talent",
+						"wuzzuf",
+						"basharsys",
+						"com"
+					],
+					"path": [
+						"talent",
+						"index",
+						"updated_profiles",
+						"talents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stg - W - CV search - updateTalentActions",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/10.3.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"num_of_hours\": 1,\n\t\"indexName\": \"testing-talents\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stg-talent.wuzzuf.basharsys.com/talent/index/updated_profiles_actions/talents",
+					"protocol": "https",
+					"host": [
+						"stg-talent",
+						"wuzzuf",
+						"basharsys",
+						"com"
+					],
+					"path": [
+						"talent",
+						"index",
+						"updated_profiles_actions",
+						"talents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "F - CV search - Talent aggregation",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"latitude\": 0,\n\t\"longitude\": 0,\n\t\"page_size\": 100,\n\t\"query\": \"egypt\",\n\t\"search_filters\": {\n\t\t\"nationality\": \"مصر\",\n\t\t\"Country\": \"مصر\",\n\t\t\"Governate\": \"القاهرة\",\n\t\t\"Area\": \"حلوان\"\n\t},\n\t\"start_index\": 0,\n\t\"user_id\": \"2971830\",\n\t\"request_type\": \"search_and_aggs\",\n\t\"debug_mode\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://talent.testing.forasna.basharsys.com/talent/search",
+					"protocol": "https",
+					"host": [
+						"talent",
+						"testing",
+						"forasna",
+						"basharsys",
+						"com"
+					],
+					"path": [
+						"talent",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "W - Send Nancy Farid email",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "insomnia/10.3.0"
+					}
+				],
+				"url": {
+					"raw": "https://testing.wuzzuf.basharsys.com/api/ext-service/send-recommendation-email/3",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"wuzzuf",
+						"basharsys",
+						"com"
+					],
+					"path": [
+						"api",
+						"ext-service",
+						"send-recommendation-email",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "W- indexing jobs",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/10.3.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"includeExpired\":false \n    ,\"truncateIndex\":false\n    ,\"size\": 5\n    ,\"recreate_schema\":false\n    ,\"index_name\":\"testing-jobs\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wuzzuf-job-testing.wuzzuf.basharsys.com/jobs/index/all",
+					"protocol": "https",
+					"host": [
+						"wuzzuf-job-testing",
+						"wuzzuf",
+						"basharsys",
+						"com"
+					],
+					"path": [
+						"jobs",
+						"index",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " W - Video Invitation -Email Remainder",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "insomnia/11.0.2"
+					}
+				],
+				"url": {
+					"raw": "https://testing.wuzzuf.basharsys.com/api/ext-service/video-request-invitation-final-reminder",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"wuzzuf",
+						"basharsys",
+						"com"
+					],
+					"path": [
+						"api",
+						"ext-service",
+						"video-request-invitation-final-reminder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "W - indexing jobs - Testing env",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"includeExpired\": false,\n\t\"truncateIndex\": false,\n\t\"size\": 5,\n\t\"recreate_schema\": false,\n\t\"index_name\": \"testing-jobs\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wuzzuf-job-testing.wuzzuf.basharsys.com/jobs/index/all",
+					"protocol": "https",
+					"host": [
+						"wuzzuf-job-testing",
+						"wuzzuf",
+						"basharsys",
+						"com"
+					],
+					"path": [
+						"jobs",
+						"index",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
